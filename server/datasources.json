@@ -1,0 +1,12 @@
+{
+  "db": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "mongodb://maher:maher@ds233769.mlab.com:33769/be4care",
+    "database": "be4care",
+    "password": "",
+    "name": "db",
+    "user": "user",
+    "connector": "mongodb"
+  }
+}
