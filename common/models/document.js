@@ -1,6 +1,16 @@
 'use strict';
 
 module.exports = function(Document) {
+
+
+  Profile.observe('before save', function setAutoData(context, next) {
+        if (context.instance) {
+                context.instance.userId = context.options.accessToken.userId;
+        }
+        next();
+    });
+
+
   Document.remoteMethod('analyse',{
       accepts:{
       arg:"link",
