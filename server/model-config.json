@@ -14,7 +14,8 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "db",
+    "public": false
   },
   "AccessToken": {
     "dataSource": "db",
@@ -35,11 +36,11 @@
     "dataSource": "db",
     "public": false
   },
-  "profile": {
+  "document": {
     "dataSource": "db",
     "public": true
   },
-  "document": {
+  "user": {
     "dataSource": "db",
     "public": true
   }

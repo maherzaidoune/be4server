@@ -1,6 +1,6 @@
 {
-  "name": "profile",
-  "base": "PersistedModel",
+  "name": "user",
+  "base": "User",
   "idInjection": true,
   "options": {
     "validateUpsert": true
@@ -15,34 +15,34 @@
       "required": true
     },
     "phNumber": {
-      "type": "string"
+      "type": "number"
     },
-    "email": {
-      "type": "string",
-      "required": true
-    },
-    "birthDate": {
-      "type": "date",
-      "required": true
+    "bDate": {
+      "type": "date"
     },
     "sex": {
-      "type": "boolean",
-      "required": true,
-      "default": false
+      "type": "boolean"
     },
-    "picture": {
+    "pUrl": {
       "type": "string"
     }
   },
   "validations": [],
   "relations": {
-    "User": {
-        "type": "belongsTo",
-        "model": "User",
-        "foreignKey": "userId"
+    "documents": {
+      "type": "hasMany",
+      "model": "document",
+      "foreignKey": "usersId"
     }
   },
   "acls": [
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "login"
+    },
     {
       "accessType": "*",
       "principalType": "ROLE",
