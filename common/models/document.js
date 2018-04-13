@@ -3,13 +3,14 @@
 module.exports = function(Document) {
 
 
+/*
   Document.observe('before save', function setAutoData(context, next) {
         if (context.instance) {
                 context.instance.userId = context.options.accessToken.userId;
         }
         next();
     });
-
+*/
 
   Document.remoteMethod('analyse',{
       accepts:{
