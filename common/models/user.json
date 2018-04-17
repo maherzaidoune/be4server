@@ -33,6 +33,25 @@
       "type": "hasMany",
       "model": "document",
       "foreignKey": "usersId"
+    },
+    "doctors": {
+      "type": "embedsMany",
+      "model": "doctor",
+      "property": "doctor",
+      "options": {
+        "persist": true,
+        "validate": true,
+        "forceId": false
+      }
+    },
+    "hHealthStructs": {
+      "type": "embedsMany",
+      "model": "healthStruct",
+      "property": "healthStruck",
+      "options": {
+        "validate": true,
+        "forceId": false
+      }
     }
   },
   "acls": [
@@ -62,5 +81,16 @@
       "permission": "DENY"
     }
   ],
-  "methods": {}
+  "methods": {
+
+    "addDoctor": {
+      "accepts": [
+        {"arg": "doctorId", "type": "string", "required": true},
+        {"arg": "options", "type": "object", "http": "optionsFromRequest"}
+      ],
+      "http": {"verb": "POST", "path": "/addDoctor/:id"}
+    }
+
+
+  }
 }

@@ -43,5 +43,13 @@
   "user": {
     "dataSource": "db",
     "public": true
+  },
+  "doctor": {
+    "dataSource": "db",
+    "public": true
+  },
+  "healthStruct": {
+    "dataSource": "db",
+    "public": true
   }
 }

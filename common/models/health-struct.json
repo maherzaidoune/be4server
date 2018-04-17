@@ -1,33 +1,24 @@
 {
-  "name": "document",
+  "name": "healthStruct",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "url": {
+    "name": {
       "type": "string",
       "required": true
     },
-    "star": {
-      "type": "boolean",
-      "default": false
-    },
-    "date": {
-      "type": "date"
-    },
-    "dr": {
-      "type": "string"
-    },
-    "type": {
+    "adress": {
       "type": "string",
       "required": true
     },
-    "HStructure": {
-      "type": "string"
+    "phNumber": {
+      "type": "string",
+      "required": true
     },
-    "place": {
+    "email": {
       "type": "string"
     }
   },
@@ -41,11 +32,16 @@
       "permission": "DENY"
     },
     {
-      "accessType": "EXECUTE",
+      "accessType": "READ",
       "principalType": "ROLE",
       "principalId": "$authenticated",
-      "permission": "ALLOW",
-      "property": "analyse"
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
     }
   ],
   "methods": {}

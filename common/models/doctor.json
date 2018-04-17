@@ -1,38 +1,31 @@
 {
-  "name": "document",
+  "name": "doctor",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "url": {
+    "fullName": {
       "type": "string",
       "required": true
     },
-    "star": {
-      "type": "boolean",
-      "default": false
-    },
-    "date": {
-      "type": "date"
-    },
-    "dr": {
+    "adress": {
       "type": "string"
     },
-    "type": {
-      "type": "string",
-      "required": true
-    },
-    "HStructure": {
+    "phNumber": {
       "type": "string"
     },
-    "place": {
+    "email": {
+      "type": "string"
+    },
+    "healthStruct": {
       "type": "string"
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+  },
   "acls": [
     {
       "accessType": "*",
@@ -41,11 +34,16 @@
       "permission": "DENY"
     },
     {
-      "accessType": "EXECUTE",
+      "accessType": "READ",
       "principalType": "ROLE",
       "principalId": "$authenticated",
-      "permission": "ALLOW",
-      "property": "analyse"
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
     }
   ],
   "methods": {}
