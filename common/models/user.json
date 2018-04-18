@@ -37,17 +37,16 @@
     "doctors": {
       "type": "embedsMany",
       "model": "doctor",
-      "property": "doctor",
+      "property": "Mydoctor",
       "options": {
-        "persist": true,
         "validate": true,
         "forceId": false
       }
     },
-    "hHealthStructs": {
+    "healthStructs": {
       "type": "embedsMany",
       "model": "healthStruct",
-      "property": "healthStruck",
+      "property": "MhealthStruck",
       "options": {
         "validate": true,
         "forceId": false
@@ -89,8 +88,13 @@
         {"arg": "options", "type": "object", "http": "optionsFromRequest"}
       ],
       "http": {"verb": "POST", "path": "/addDoctor/:id"}
+    },
+    "addHealthStruct": {
+      "accepts": [
+        {"arg": "healthStructId", "type": "string", "required": true},
+        {"arg": "options", "type": "object", "http": "optionsFromRequest"}
+      ],
+      "http": {"verb": "POST", "path": "/addHealthStruct/:id"}
     }
-
-
   }
 }

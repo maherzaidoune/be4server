@@ -21,6 +21,12 @@
     "email": {
       "type": "string"
     }
+    ,
+    "id": {
+    "type": "string",
+    "id": true,
+    "defaultFn": "uuid"
+}
   },
   "validations": [],
   "relations": {},
