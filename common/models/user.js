@@ -47,11 +47,11 @@ module.exports = function(User) {
 }
 
 // remote hook for adding doctor  created via user to doctor  database
-
+/*
  User.observe('*.__post__healthStructs__', function(ctx, inst, next) {
     console.log("remote methode called");
     next()
   });
-
+*/
 
 }
