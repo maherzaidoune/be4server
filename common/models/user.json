@@ -13,7 +13,7 @@
       "type": "string"
     },
     "phNumber": {
-      "type": "number"
+      "type": "string"
     },
     "bDate": {
       "type": "date"
