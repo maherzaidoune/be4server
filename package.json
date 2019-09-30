@@ -23,7 +23,7 @@
     "serve-favicon": "^2.0.1",
     "sharp": "^0.20.1",
     "strong-error-handler": "^2.0.0",
-    "tesseract.js": "^1.0.10"
+    "tesseract.js": "^1.0.19"
   },
   "devDependencies": {
     "eslint": "^3.17.1",
